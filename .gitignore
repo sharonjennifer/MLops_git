@@ -10,3 +10,9 @@ __pycache__/
 # Data Quality Reports
 reports/*.json
 !reports/.gitkeep
+
+# Large datasets - not tracked
+data/raw/ecommerce.csv
+data/raw/*.csv
+!data/raw/sample_clean.csv
+!data/raw/sample_with_issues.csv

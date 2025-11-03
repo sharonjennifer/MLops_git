@@ -6,7 +6,7 @@ import json
 
 def load_data(file_path: str) -> pd.DataFrame:
     """
-    Load CSV file into a pandas DataFrame.
+    Load CSV file into a pandas DataFrame with automatic encoding detection.
     
     Args:
         file_path: Path to the CSV file
@@ -14,14 +14,22 @@ def load_data(file_path: str) -> pd.DataFrame:
     Returns:
         pd.DataFrame: Loaded data
     """
-    try:
-        df = pd.read_csv(file_path)
-        return df
-    except FileNotFoundError:
-        raise FileNotFoundError(f"File not found: {file_path}")
-    except Exception as e:
-        raise Exception(f"Error loading file: {str(e)}")
-
+    encodings = ['utf-8', 'latin1', 'iso-8859-1', 'cp1252']
+    
+    for encoding in encodings:
+        try:
+            df = pd.read_csv(file_path, encoding=encoding)
+            return df
+        except UnicodeDecodeError:
+            continue
+        except FileNotFoundError:
+            raise FileNotFoundError(f"File not found: {file_path}")
+        except Exception as e:
+            if encoding == encodings[-1]:  # Last encoding attempt
+                raise Exception(f"Error loading file: {str(e)}")
+            continue
+    
+    raise Exception(f"Could not decode file with any supported encoding")
 
 def check_missing_values(df: pd.DataFrame) -> Dict[str, Dict[str, Any]]:
     """
