@@ -1,0 +1,11 @@
+id,name,age,salary,department,join_date
+1,John Doe,28,50000,Engineering,2020-01-15
+2,Jane Smith,34,65000,Marketing,2019-03-22
+3,Bob Johnson,45,75000,Engineering,2018-07-10
+4,Alice Brown,29,55000,Sales,2021-02-01
+5,Charlie Wilson,38,70000,Marketing,2019-11-05
+6,Diana Martinez,31,60000,Engineering,2020-05-18
+7,Eve Davis,42,80000,Sales,2017-09-30
+8,Frank Miller,26,48000,Marketing,2022-01-12
+9,Grace Lee,35,72000,Engineering,2018-12-20
+10,Henry Taylor,40,68000,Sales,2019-06-15
