@@ -234,32 +234,10 @@ The analyzer calculates the following metrics:
 - Clean, documented, and maintainable code
 - Production-ready error handling
 
-## Learning Outcomes
-
-This project demonstrates practical MLOps skills:
-- Virtual environment management
-- Version control with Git and GitHub
-- Test-driven development (TDD)
-- CI/CD pipeline implementation
-- Data quality validation techniques
-- MLOps best practices
-- Clean code principles and documentation
-
-## Future Enhancements
-
-Potential additions to extend this project:
-- HTML report generation with visualizations
-- Data profiling dashboard with charts
-- Additional outlier detection methods
-- Support for multiple file formats (Excel, JSON, Parquet)
-- Data validation rules engine
-- Integration with data versioning tools (DVC)
-- Automated email alerts for quality threshold violations
-- API endpoint for quality analysis service
 
 ## Repository Information
 
-**Author:** Sharon Jennifer  
+**Author:** Sharon Jennifer Justin Devaraj
 **Course:** MLOps (IE-7374)  
 **Repository:** [github.com/sharonjennifer/MLops_git](https://github.com/sharonjennifer/MLops_git)
 
