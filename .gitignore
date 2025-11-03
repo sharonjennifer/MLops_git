@@ -1,0 +1,8 @@
+﻿venv/
+lab_01/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.xml
+.DS_Store
