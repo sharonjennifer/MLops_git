@@ -165,12 +165,34 @@ The analyzer was tested on a real e-commerce dataset containing 541,909 transact
 
 **Interpretation:** Despite significant missing CustomerID data and numerous outliers in pricing and quantity, the dataset maintains a high quality score of 98.45/100, indicating it is usable with appropriate preprocessing.
 
-### Note on Data Files
+### About the E-commerce Dataset
 
-For demonstration, this repository includes small sample CSV files. Large datasets (like the 541k-row e-commerce dataset) are excluded from version control following MLOps best practices. Users can analyze their own datasets by downloading from:
-- Kaggle datasets
+**Dataset Details:**
+- **Source:** Online Retail Dataset
+- **Size:** 541,909 transactions, 8 columns, 44.5 MB
+- **Columns:** InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country
+- **Location:** Not included in repository (exceeds GitHub file size recommendations)
+
+**Why Not Included:**
+Following MLOps best practices, large datasets (>10 MB) are excluded from version control to:
+- Keep repository lightweight and cloneable
+- Avoid GitHub storage limitations
+- Follow industry standards for data management
+- Enable faster CI/CD pipeline execution
+
+**To Replicate Analysis:**
+Users can download similar e-commerce datasets from:
+- Kaggle: Online Retail datasets
 - UCI Machine Learning Repository
-- Production data sources
+- Public data repositories
+
+The complete analysis results are preserved in `reports/ecommerce_report.json`, demonstrating the tool's effectiveness on production-scale data.
+
+### Sample Datasets Included
+
+Two small sample datasets are provided in `data/raw/` for testing and demonstration:
+- `sample_clean.csv` - 10 rows with perfect data quality (100/100 score)
+- `sample_with_issues.csv` - 12 rows with intentional quality issues (95.28/100 score)
 
 ## Testing
 
@@ -234,32 +256,10 @@ The analyzer calculates the following metrics:
 - Clean, documented, and maintainable code
 - Production-ready error handling
 
-## Learning Outcomes
-
-This project demonstrates practical MLOps skills:
-- Virtual environment management
-- Version control with Git and GitHub
-- Test-driven development (TDD)
-- CI/CD pipeline implementation
-- Data quality validation techniques
-- MLOps best practices
-- Clean code principles and documentation
-
-## Future Enhancements
-
-Potential additions to extend this project:
-- HTML report generation with visualizations
-- Data profiling dashboard with charts
-- Additional outlier detection methods
-- Support for multiple file formats (Excel, JSON, Parquet)
-- Data validation rules engine
-- Integration with data versioning tools (DVC)
-- Automated email alerts for quality threshold violations
-- API endpoint for quality analysis service
 
 ## Repository Information
 
-**Author:** Sharon Jennifer  
+**Author:** Sharon Jennifer Justin Devaraj
 **Course:** MLOps (IE-7374)  
 **Repository:** [github.com/sharonjennifer/MLops_git](https://github.com/sharonjennifer/MLops_git)
 
